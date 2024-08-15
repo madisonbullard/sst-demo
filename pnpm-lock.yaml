@@ -15,6 +15,9 @@ importers:
       '@tsconfig/node20':
         specifier: 20.1.4
         version: 20.1.4
+      '@types/aws-lambda':
+        specifier: 8.10.143
+        version: 8.10.143
       typescript:
         specifier: 5.5.4
         version: 5.5.4
@@ -311,6 +314,9 @@ packages:
 
   '@tsconfig/node20@20.1.4':
     resolution: {integrity: sha512-sqgsT69YFeLWf5NtJ4Xq/xAF8p4ZQHlmGW74Nu2tD4+g5fAsposc4ZfaaPixVu4y01BEiDCWLRDCvDM5JOsRxg==}
+
+  '@types/aws-lambda@8.10.143':
+    resolution: {integrity: sha512-u5vzlcR14ge/4pMTTMDQr3MF0wEe38B2F9o84uC4F43vN5DGTy63npRrB6jQhyt+C0lGv4ZfiRcRkqJoZuPnmg==}
 
   aws4fetch@1.0.19:
     resolution: {integrity: sha512-N+F8pZ9hVjckkHODDyalITRNxBJxAGX5ShkVoAgHwqERXsW8Iu5ziFx3SCjGlxx/YStWBTZx4HI/GCMvTBu5kQ==}
@@ -1059,6 +1065,8 @@ snapshots:
       tslib: 2.6.3
 
   '@tsconfig/node20@20.1.4': {}
+
+  '@types/aws-lambda@8.10.143': {}
 
   aws4fetch@1.0.19: {}
 
