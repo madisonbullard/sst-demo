@@ -11,6 +11,6 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
-    "sst": "ion"
+    "sst": "0.1.111"
   }
 }

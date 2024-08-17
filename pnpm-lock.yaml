@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       sst:
-        specifier: ion
-        version: 0.1.101
+        specifier: 0.1.111
+        version: 0.1.111
     devDependencies:
       '@tsconfig/node20':
         specifier: 20.1.4
@@ -349,33 +349,33 @@ packages:
   openid-client@5.6.4:
     resolution: {integrity: sha512-T1h3B10BRPKfcObdBklX639tVz+xh34O7GjofqrqiAQdm7eHsQ00ih18x6wuJ/E6FxdtS2u3FmUGPDeEcMwzNA==}
 
-  sst-darwin-arm64@0.1.101:
-    resolution: {integrity: sha512-KFlC+gjWc5xuhInxPHgawnbgmedec0SVdqLAoSRyBDvvdkDKG0A6GZUZ5JS9SIZtnzb5SjVMDeJ8MJjWuImCOw==}
+  sst-darwin-arm64@0.1.111:
+    resolution: {integrity: sha512-csu/WU+mvjwXZ9+ugmbbLAPZluSFafv37c+ZHHndMZYaqw/aRS6lzoxUuztCPVJHkZ2NIYRY+vVecI7XgPCP+g==}
     cpu: [arm64]
     os: [darwin]
 
-  sst-darwin-x64@0.1.101:
-    resolution: {integrity: sha512-4HTKuG6hqr9nO4HAtvBlliHV2WvK9XyuSVS4ZqbOc1AwZcdevPeb2nO3PCGMc3LcvwyUrdnYXCYz/bO29BsI3Q==}
+  sst-darwin-x64@0.1.111:
+    resolution: {integrity: sha512-hz0nhzI7DD9mygTmkH7P6LZ4f9BLCP5uHrJfp5Yunoxw9W9RPgiK+2Vm6UQCirNkIps/1qW1vuPVTDGHmflh8Q==}
     cpu: [x64]
     os: [darwin]
 
-  sst-linux-arm64@0.1.101:
-    resolution: {integrity: sha512-r6SeizNe3UAjMTIqx47xA4TVS/yuVYyJCc+vYgGCEd4B4gnitOAXfvqQhuogbrXL/3pB9X/rBG1+7ev0MKeGyw==}
+  sst-linux-arm64@0.1.111:
+    resolution: {integrity: sha512-cTt3RXYXss9oFL2rRpRMEziGgKOUvlZdTuhIvz+pxioIQe/z+jdEauJcD2H4wc8+MMkeH95HH0TAcrHf0tNbdA==}
     cpu: [arm64]
     os: [linux]
 
-  sst-linux-x64@0.1.101:
-    resolution: {integrity: sha512-R99z1iS1yp7kk7RjS2t/E2xEivteMmdYwpgk7LdCrmBWHBf+1eLmPXMx/pZceeR7O5cgR9l3mWYEj6dKMgkPmQ==}
+  sst-linux-x64@0.1.111:
+    resolution: {integrity: sha512-4Wf8OeTyziUeSqWM4C/2OPjMI80KmCK1Paai7Z5opxk7eP3xKK7Fg0f4k15LBXvoBQqancScZffIB4ggBlmmYA==}
     cpu: [x64]
     os: [linux]
 
-  sst-linux-x86@0.1.101:
-    resolution: {integrity: sha512-8MNXaMc8zU5jSSnwekebvaoAWdMFeqCsEuVOjYBQHeydwjrOXg4KxgaiPd8rjflKDwz19MvBIF+yJPAHJLLTvg==}
+  sst-linux-x86@0.1.111:
+    resolution: {integrity: sha512-v2UAE90J6qVEEhvzbhjqPJ+0RvfEvGcaSUd7Qg+628hQklH0wgMTtnmr3mdamwPrcdLJHYi2Uxd7FtSySronNQ==}
     cpu: [x86]
     os: [linux]
 
-  sst@0.1.101:
-    resolution: {integrity: sha512-FCbENhXBZYbqMTal1ly4Owo3EJxbR4zj8PMbDvaQnn2ITplpJ0oVLeb5M/o6rONLu2hpi8BTQCxxaVZVaQqt0w==}
+  sst@0.1.111:
+    resolution: {integrity: sha512-MN33nnLjza7Qu+3Lt6sCpAlV9DhXwdwz6FnL/05+cxW/tV87KTRyzgZUqAX30y515zR5URcuYH3Towgpa53Ibg==}
     hasBin: true
     peerDependencies:
       hono: 4.x
@@ -1095,33 +1095,33 @@ snapshots:
       object-hash: 2.2.0
       oidc-token-hash: 5.0.3
 
-  sst-darwin-arm64@0.1.101:
+  sst-darwin-arm64@0.1.111:
     optional: true
 
-  sst-darwin-x64@0.1.101:
+  sst-darwin-x64@0.1.111:
     optional: true
 
-  sst-linux-arm64@0.1.101:
+  sst-linux-arm64@0.1.111:
     optional: true
 
-  sst-linux-x64@0.1.101:
+  sst-linux-x64@0.1.111:
     optional: true
 
-  sst-linux-x86@0.1.101:
+  sst-linux-x86@0.1.111:
     optional: true
 
-  sst@0.1.101:
+  sst@0.1.111:
     dependencies:
       '@aws-sdk/client-lambda': 3.478.0
       aws4fetch: 1.0.19
       jose: 5.2.3
       openid-client: 5.6.4
     optionalDependencies:
-      sst-darwin-arm64: 0.1.101
-      sst-darwin-x64: 0.1.101
-      sst-linux-arm64: 0.1.101
-      sst-linux-x64: 0.1.101
-      sst-linux-x86: 0.1.101
+      sst-darwin-arm64: 0.1.111
+      sst-darwin-x64: 0.1.111
+      sst-linux-arm64: 0.1.111
+      sst-linux-x64: 0.1.111
+      sst-linux-x86: 0.1.111
     transitivePeerDependencies:
       - aws-crt
 
