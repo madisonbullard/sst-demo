@@ -6,6 +6,8 @@ export default $config({
       name: "sst-demo-test",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
+      profile:
+        input.stage === "production" ? "sst-demo-production" : "sst-demo-dev",
     };
   },
   async run() {},
