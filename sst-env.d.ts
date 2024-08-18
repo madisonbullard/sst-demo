@@ -7,6 +7,9 @@ declare module "sst" {
       "type": "sst.aws.Router"
       "url": string
     }
+    "Database": {
+      "type": "sst.cloudflare.D1"
+    }
     "Frontend": {
       "type": "sst.aws.SvelteKit"
       "url": string
