@@ -1,5 +1,4 @@
 /// <reference path="./.sst/platform/config.d.ts" />
-
 export default $config({
 	app(input) {
 		return {
@@ -8,15 +7,15 @@ export default $config({
 			home: "aws",
 			profile:
 				input.stage === "production" ? "sst-demo-production" : "sst-demo-dev",
+			providers: { cloudflare: true, aws: true },
 		};
 	},
 	async run() {
 		const frontend = await import("./infra/frontend");
 		const api = await import("./infra/api");
-
 		return {
 			site: frontend.site.url,
-			api: api.apiRouter.url
-		}
+			api: api.apiRouter.url,
+		};
 	},
 });
