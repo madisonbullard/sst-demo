@@ -10,7 +10,7 @@ importers:
     dependencies:
       sst:
         specifier: 0.1.111
-        version: 0.1.111
+        version: 0.1.111(hono@4.5.6)
     devDependencies:
       '@biomejs/biome':
         specifier: 1.8.3
@@ -25,15 +25,14 @@ importers:
         specifier: 5.5.4
         version: 5.5.4
 
-  packages/frontend:
+  packages/api:
     dependencies:
-      svelte-kit-sst:
-        specifier: ^2.43.5
-        version: 2.43.5
+      hono:
+        specifier: ^4.5.6
+        version: 4.5.6
+
+  packages/frontend:
     devDependencies:
-      '@sveltejs/adapter-auto':
-        specifier: ^3.0.0
-        version: 3.2.4(@sveltejs/kit@2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.4.1))(svelte@4.2.18)(vite@5.4.1))
       '@sveltejs/kit':
         specifier: ^2.0.0
         version: 2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.4.1))(svelte@4.2.18)(vite@5.4.1)
@@ -46,6 +45,9 @@ importers:
       svelte-check:
         specifier: ^3.6.0
         version: 3.8.5(postcss@8.4.41)(svelte@4.2.18)
+      svelte-kit-sst:
+        specifier: ^2.43.5
+        version: 2.43.5
       typescript:
         specifier: ^5.0.0
         version: 5.5.4
@@ -639,11 +641,6 @@ packages:
     resolution: {integrity: sha512-IHk53BVw6MPMi2Gsn+hCng8rFA3ZmR3Rk7GllxDUW9qFJl/hiSvskn7XldkECapQVkIg/1dHpMAxI9xSTaLLSA==}
     engines: {node: '>=14.0.0'}
 
-  '@sveltejs/adapter-auto@3.2.4':
-    resolution: {integrity: sha512-a64AKYbfTUrVwU0xslzv1Jf3M8bj0IwhptaXmhgIkjXspBXhD0od9JiItQHchijpLMGdEDcYBlvqySkEawv6mQ==}
-    peerDependencies:
-      '@sveltejs/kit': ^2.0.0
-
   '@sveltejs/kit@2.5.22':
     resolution: {integrity: sha512-PQ98baF2WzvG5yiO4cZKJZJG60XjHTZD1jyho3u9Kmthx2ytdGYyVPPvKXgKXpKSq4wwctD9dl0d2blSbJMcOg==}
     engines: {node: '>=18.13'}
@@ -811,6 +808,10 @@ packages:
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+
+  hono@4.5.6:
+    resolution: {integrity: sha512-9SuUC/zLQv8YAcnIxJko0KCeLI0Q6menPsDWuJ9jaH+r8ZkVXeLqeLs1QJXCPKKbURAWj9x0SJBSFh803EnAUw==}
+    engines: {node: '>=16.0.0'}
 
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
@@ -1970,11 +1971,6 @@ snapshots:
       '@smithy/types': 2.12.0
       tslib: 2.6.3
 
-  '@sveltejs/adapter-auto@3.2.4(@sveltejs/kit@2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.4.1))(svelte@4.2.18)(vite@5.4.1))':
-    dependencies:
-      '@sveltejs/kit': 2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.4.1))(svelte@4.2.18)(vite@5.4.1)
-      import-meta-resolve: 4.1.0
-
   '@sveltejs/kit@2.5.22(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.4.1))(svelte@4.2.18)(vite@5.4.1)':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.4.1)
@@ -2165,6 +2161,8 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
+  hono@4.5.6: {}
+
   import-meta-resolve@4.1.0: {}
 
   inflight@1.0.6:
@@ -2336,13 +2334,14 @@ snapshots:
   sst-linux-x86@0.1.111:
     optional: true
 
-  sst@0.1.111:
+  sst@0.1.111(hono@4.5.6):
     dependencies:
       '@aws-sdk/client-lambda': 3.478.0
       aws4fetch: 1.0.19
       jose: 5.2.3
       openid-client: 5.6.4
     optionalDependencies:
+      hono: 4.5.6
       sst-darwin-arm64: 0.1.111
       sst-darwin-x64: 0.1.111
       sst-linux-arm64: 0.1.111
