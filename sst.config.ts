@@ -12,9 +12,11 @@ export default $config({
 	},
 	async run() {
 		const frontend = await import("./infra/frontend");
+		const api = await import("./infra/api");
 
 		return {
-			site: frontend.site.url
+			site: frontend.site.url,
+			api: api.apiRouter.url
 		}
 	},
 });
