@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "check": "pnpm biome check --write ./",
-    "dev": "sst dev",
+    "dev": " sst dev",
     "sso": "aws sso login --sso-session=sst-demo"
   },
   "devDependencies": {
