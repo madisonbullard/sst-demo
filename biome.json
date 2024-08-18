@@ -11,7 +11,7 @@
 	},
 	"files": {
 		"include": ["**/*.ts"],
-		"ignore": ["node_modules", ".sst"]
+		"ignore": ["node_modules", ".sst", "sst-env.d.ts"]
 	},
 	"overrides": [
 		{
