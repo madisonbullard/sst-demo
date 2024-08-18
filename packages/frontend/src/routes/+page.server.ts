@@ -1,12 +1,12 @@
-import { Resource } from "sst"
-import type { PageLoad } from "./$types"
+import { Resource } from "sst";
+import type { PageServerLoad } from "./$types";
 
-export const load:PageLoad = async () => {
-  const res = await fetch(Resource.ApiRouter.url)
+export const load: PageServerLoad = async () => {
+	const res = await fetch(Resource.ApiRouter.url);
 
-  const msg = await res.json()
+	const msg = await res.json();
 
-  return {
-    msg
-  }
-}
+	return {
+		msg,
+	};
+};
