@@ -10,6 +10,11 @@ declare module "sst" {
     "Database": {
       "type": "sst.cloudflare.D1"
     }
+    "DatabaseLinkable": {
+      "accountId": string
+      "id": string
+      "type": "sst.sst.Linkable"
+    }
     "Frontend": {
       "type": "sst.aws.SvelteKit"
       "url": string

@@ -7,18 +7,20 @@ export default $config({
 			home: "aws",
 			profile:
 				input.stage === "production" ? "sst-demo-production" : "sst-demo-dev",
-			providers: { cloudflare: true, aws: true },
+			providers: {
+				cloudflare: true,
+				aws: true,
+			},
 		};
 	},
 	async run() {
 		const frontend = await import("./infra/frontend");
 		const api = await import("./infra/api");
-		const db = await import("./infra/db");
+		await import("./infra/db");
 
 		return {
 			site: frontend.site.url,
 			api: api.apiRouter.url,
-			db: db.db.id,
 		};
 	},
 });
