@@ -6,6 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "exports": {
+		"./user": {
+			"types": "./src/routes/user/index.ts",
+			"default": "./src/routes/user/index.ts"
+		}
+	},
   "keywords": [],
   "author": "",
   "license": "ISC",

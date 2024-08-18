@@ -13,6 +13,6 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
-    "sst": "0.1.111"
+    "sst": "3.0.42"
   }
 }
