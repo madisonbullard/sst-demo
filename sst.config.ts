@@ -10,5 +10,11 @@ export default $config({
 				input.stage === "production" ? "sst-demo-production" : "sst-demo-dev",
 		};
 	},
-	async run() {},
+	async run() {
+		const frontend = await import("./infra/frontend");
+
+		return {
+			site: frontend.site.url
+		}
+	},
 });
