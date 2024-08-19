@@ -1,15 +1,11 @@
-export const d1 = new sst.cloudflare.D1("Database");
+export const db = new sst.cloudflare.D1("Database");
 
-// const binding = sst.cloudflare.binding({
-// 	type: "d1DatabaseBindings",
-// 	properties: {
-// 		databaseId: d1.id,
-// 	},
-// });
+export const worker = new sst.cloudflare.Worker("Worker", {
+	handler: "packages/backend/src/index.ts",
+	link: [db],
+	url: true,
+});
 
-export const database = new sst.Linkable("DatabaseLinkable", {
-	properties: {
-		id: d1.id,
-		accountId: d1.nodes.database.accountId,
-	},
+export const dbDetails = new sst.Linkable("DbDetails", {
+	properties: { accountId: db.nodes.database.accountId, dbId: db.id },
 });

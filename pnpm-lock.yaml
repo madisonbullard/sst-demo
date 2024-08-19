@@ -9,12 +9,15 @@ importers:
   .:
     dependencies:
       sst:
-        specifier: 3.0.42
-        version: 3.0.42(hono@4.5.6)
+        specifier: 3.0.45
+        version: 3.0.45(hono@4.5.6)
     devDependencies:
       '@biomejs/biome':
         specifier: 1.8.3
         version: 1.8.3
+      '@cloudflare/workers-types':
+        specifier: ^4.20240815.0
+        version: 4.20240815.0
       '@tsconfig/node20':
         specifier: 20.1.4
         version: 20.1.4
@@ -24,22 +27,6 @@ importers:
       typescript:
         specifier: 5.5.4
         version: 5.5.4
-
-  packages/api:
-    dependencies:
-      hono:
-        specifier: ^4.5.6
-        version: 4.5.6
-
-  packages/db:
-    dependencies:
-      drizzle-orm:
-        specifier: ^0.33.0
-        version: 0.33.0
-    devDependencies:
-      drizzle-kit:
-        specifier: ^0.24.0
-        version: 0.24.0
 
   packages/frontend:
     devDependencies:
@@ -64,6 +51,19 @@ importers:
       vite:
         specifier: ^5.0.3
         version: 5.4.1
+
+  packages/workers:
+    dependencies:
+      drizzle-orm:
+        specifier: ^0.33.0
+        version: 0.33.0(@cloudflare/workers-types@4.20240815.0)
+      hono:
+        specifier: ^4.5.6
+        version: 4.5.6
+    devDependencies:
+      drizzle-kit:
+        specifier: ^0.24.0
+        version: 0.24.0
 
 packages:
 
@@ -236,6 +236,9 @@ packages:
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
+
+  '@cloudflare/workers-types@4.20240815.0':
+    resolution: {integrity: sha512-H/IXCOahT1lr4RKzsiCkyjM7+LCPLtl2wjxyLG8xMTNERR0XuD1Vcfns6TraE0cd5+IcKe7j3rpzBlSCjZ+61A==}
 
   '@drizzle-team/brocli@0.8.2':
     resolution: {integrity: sha512-zTrFENsqGvOkBOuHDC1pXCkDXNd2UhP4lI3gYGhQ1R1SPeAAfqzPsV1dcpMy4uNU6kB5VpU5NGhvwxVNETR02A==}
@@ -1380,33 +1383,33 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
-  sst-darwin-arm64@3.0.42:
-    resolution: {integrity: sha512-XVmVLYk5Gt0+qfHwtiDHVga5t7N+Bm69K8MJyxfOM0nRPMF+0xaZquz3YkuU+IY4tXeizk04oe1X8XrADdjQeA==}
+  sst-darwin-arm64@3.0.45:
+    resolution: {integrity: sha512-xZ/vb+HoM3uGovduw4I82GUjkQWoIcon/liEovnc1c8FdEJWrS6odZHF3rSROKgNZvA+anlmEpOtzebvoCGShA==}
     cpu: [arm64]
     os: [darwin]
 
-  sst-darwin-x64@3.0.42:
-    resolution: {integrity: sha512-tXJz2dOrDns4xIL5yZ/dkHE43am24f/4v1f+VUDzyADYNwftlaRvsX4hvEBFQoNSXeKfnoarHgis1I6hFeQwjQ==}
+  sst-darwin-x64@3.0.45:
+    resolution: {integrity: sha512-1og0bW1s/2J2dunof+2Zjeay5jt9eOzWz5qW9tu7tduj5DtzlPQsztO403wcFn1A4X5cexASIB+0aGJSkHvPWQ==}
     cpu: [x64]
     os: [darwin]
 
-  sst-linux-arm64@3.0.42:
-    resolution: {integrity: sha512-F+3LDSguuApUeIhLiQfhdx9SB4G7bRnFFQZL4a9MCImcR4yR1O7ZD8lFiaheHZLSSWgxjg+2ncMnu8ZlmegOaA==}
+  sst-linux-arm64@3.0.45:
+    resolution: {integrity: sha512-mlRCEdHeLApm8CyKkipTXvdAaRRUdcwLuQt0gnLsPNzsEygeYj+SkBQjOxTDjHEsK+MYCvEXuL36EPib9mB/xQ==}
     cpu: [arm64]
     os: [linux]
 
-  sst-linux-x64@3.0.42:
-    resolution: {integrity: sha512-uJ0w+vqFJ8bv6B4551sL3PVMTrPO641hDuytzSVz13SpIzDG3iadRe1q+Uyo31SmaL+VJMgOP662Wvqbx2EUlw==}
+  sst-linux-x64@3.0.45:
+    resolution: {integrity: sha512-bCS59EvZPEjLNnt9y7GI7u4HsVfvKRbkfym4bD+5Ib3E6AaokLXCYF1KekHCyIeCqRT3sjp69TXgkwPNdOtvew==}
     cpu: [x64]
     os: [linux]
 
-  sst-linux-x86@3.0.42:
-    resolution: {integrity: sha512-MX5S0YHBEJZ0YdMxVEH26+zqdr1WyRtT1f9hTUt5MHhBY5DEi6PY44QqJofRnhlOLQtVPeSx3AJAwIALsXU/TA==}
+  sst-linux-x86@3.0.45:
+    resolution: {integrity: sha512-tTJBS/WuzuKViE72fqEsqvETOC6qvaP36+49cBp29X6w9kJGL9jzbpY1yjorNsG7r4AKHqW4Kf1AXURMUYCodw==}
     cpu: [x86]
     os: [linux]
 
-  sst@3.0.42:
-    resolution: {integrity: sha512-XyoubtSRZdhaPUjiC2QKs1xM4+LLQz7mSV9HaeVaUIBwao//HeA0VAvclnkrTDc62V/+nl4vk7j4l3BOF6dQHA==}
+  sst@3.0.45:
+    resolution: {integrity: sha512-sxkkPAWy+6vN0PFyO+48iYVYVvrgpVTrL377W2P87UICQGJ75Wiy6bAdlz9Niu3SpHrJoUdKJzw3v+aw1dvaOw==}
     hasBin: true
     peerDependencies:
       hono: 4.x
@@ -1961,6 +1964,8 @@ snapshots:
 
   '@biomejs/cli-win32-x64@1.8.3':
     optional: true
+
+  '@cloudflare/workers-types@4.20240815.0': {}
 
   '@drizzle-team/brocli@0.8.2': {}
 
@@ -2666,7 +2671,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.33.0: {}
+  drizzle-orm@0.33.0(@cloudflare/workers-types@4.20240815.0):
+    optionalDependencies:
+      '@cloudflare/workers-types': 4.20240815.0
 
   es6-promise@3.3.1: {}
 
@@ -2963,22 +2970,22 @@ snapshots:
 
   source-map@0.6.1: {}
 
-  sst-darwin-arm64@3.0.42:
+  sst-darwin-arm64@3.0.45:
     optional: true
 
-  sst-darwin-x64@3.0.42:
+  sst-darwin-x64@3.0.45:
     optional: true
 
-  sst-linux-arm64@3.0.42:
+  sst-linux-arm64@3.0.45:
     optional: true
 
-  sst-linux-x64@3.0.42:
+  sst-linux-x64@3.0.45:
     optional: true
 
-  sst-linux-x86@3.0.42:
+  sst-linux-x86@3.0.45:
     optional: true
 
-  sst@3.0.42(hono@4.5.6):
+  sst@3.0.45(hono@4.5.6):
     dependencies:
       '@aws-sdk/client-lambda': 3.478.0
       aws4fetch: 1.0.19
@@ -2986,11 +2993,11 @@ snapshots:
       openid-client: 5.6.4
     optionalDependencies:
       hono: 4.5.6
-      sst-darwin-arm64: 3.0.42
-      sst-darwin-x64: 3.0.42
-      sst-linux-arm64: 3.0.42
-      sst-linux-x64: 3.0.42
-      sst-linux-x86: 3.0.42
+      sst-darwin-arm64: 3.0.45
+      sst-darwin-x64: 3.0.45
+      sst-linux-arm64: 3.0.45
+      sst-linux-x64: 3.0.45
+      sst-linux-x86: 3.0.45
     transitivePeerDependencies:
       - aws-crt
 

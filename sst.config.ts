@@ -2,11 +2,9 @@
 export default $config({
 	app(input) {
 		return {
-			name: "sst-demo-test",
+			name: "sst-demo-test2",
 			removal: input?.stage === "production" ? "retain" : "remove",
 			home: "aws",
-			profile:
-				input.stage === "production" ? "sst-demo-production" : "sst-demo-dev",
 			providers: {
 				cloudflare: true,
 				aws: true,
@@ -15,12 +13,11 @@ export default $config({
 	},
 	async run() {
 		const frontend = await import("./infra/frontend");
-		const api = await import("./infra/api");
-		await import("./infra/db");
+		const db = await import("./infra/db");
 
 		return {
+			db: db.worker.url,
 			site: frontend.site.url,
-			api: api.apiRouter.url,
 		};
 	},
 });

@@ -1,6 +1,6 @@
-import { apiRouter } from "./api";
+import { worker } from "./db";
 
 export const site = new sst.aws.SvelteKit("Frontend", {
 	path: "packages/frontend",
-	link: [apiRouter],
+	link: [worker],
 });

@@ -3,25 +3,20 @@
 import "sst"
 declare module "sst" {
   export interface Resource {
-    "ApiRouter": {
-      "type": "sst.aws.Router"
-      "url": string
-    }
     "Database": {
       "type": "sst.cloudflare.D1"
     }
-    "DatabaseLinkable": {
+    "DbDetails": {
       "accountId": string
-      "id": string
+      "dbId": string
       "type": "sst.sst.Linkable"
     }
     "Frontend": {
       "type": "sst.aws.SvelteKit"
       "url": string
     }
-    "Hono": {
-      "name": string
-      "type": "sst.aws.Function"
+    "Worker": {
+      "type": "sst.cloudflare.Worker"
       "url": string
     }
   }

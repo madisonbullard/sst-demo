@@ -8,11 +8,12 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
+    "@cloudflare/workers-types": "^4.20240815.0",
     "@tsconfig/node20": "20.1.4",
     "@types/aws-lambda": "8.10.143",
     "typescript": "5.5.4"
   },
   "dependencies": {
-    "sst": "3.0.42"
+    "sst": "3.0.45"
   }
 }
