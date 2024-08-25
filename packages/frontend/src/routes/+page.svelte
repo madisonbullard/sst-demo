@@ -1,5 +1,14 @@
 <script lang="ts">
-  export let data;
+  import { enhance } from "$app/forms";
+  import type { ActionData } from "./$types";
+
+  export let form: ActionData;
 </script>
 
-<h1>Hono says: {data.msg.message}</h1>
+{#if form?.user}
+  <h1>Created user:{form.user.email}</h1>
+{/if}
+<form method="POST" use:enhance>
+  <input type="email" name="email" />
+  <button>Create user</button>
+</form>

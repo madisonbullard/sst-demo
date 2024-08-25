@@ -1,0 +1,1 @@
+ALTER TABLE `user` RENAME COLUMN `text_modifiers` TO `created_at`;

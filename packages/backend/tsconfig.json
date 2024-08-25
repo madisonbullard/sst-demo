@@ -2,6 +2,8 @@
 	"extends": "@tsconfig/node20/tsconfig.json",
 	"compilerOptions": {
 		"module": "ESNext",
-		"moduleResolution": "bundler"
-	}
+		"moduleResolution": "bundler",
+		"strict": true
+	},
+	"include": ["src/**/*.ts", "sst-env.d.ts"]
 }
