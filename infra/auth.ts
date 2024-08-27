@@ -1,10 +1,9 @@
-const secrets = {
-	GithubClientID: new sst.Secret("GithubClientID"),
-	GithubClientSecret: new sst.Secret("GithubClientSecret"),
-};
-const auth = new sst.aws.Auth("Auth", {
+const GithubClientID = new sst.Secret("GithubClientID");
+const GithubClientSecret = new sst.Secret("GithubClientSecret");
+
+export const auth = new sst.aws.Auth("Auth", {
 	authenticator: {
-		link: [secrets.GithubClientID, secrets.GithubClientSecret],
+		link: [GithubClientID, GithubClientSecret],
 		handler: "packages/auth/src/functions/index.handler",
 	},
 });

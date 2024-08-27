@@ -1,7 +1,7 @@
-import { Resource } from "sst";
 import { auth } from "sst/aws/auth";
 import { GithubAdapter } from "sst/auth/adapter";
 import { session } from "../utils/session.js";
+import { Resource } from "sst";
 
 export const handler = auth.authorizer({
 	session,

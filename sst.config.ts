@@ -12,10 +12,12 @@ export default $config({
 		};
 	},
 	async run() {
+		const { auth } = await import("./infra/auth");
 		const frontend = await import("./infra/frontend");
 		const db = await import("./infra/db");
 
 		return {
+			auth: auth.url,
 			db: db.worker.url,
 			site: frontend.site.url,
 		};
